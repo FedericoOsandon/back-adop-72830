@@ -21,6 +21,7 @@ const { port, mongo_url }  = configObject
 const PORT = port 
 const connection = mongoose.connect(mongo_url)
 
+app.use(express.static('./public'))
 app.use(express.json())
 app.use(cookieParser())
 app.use(cors())
